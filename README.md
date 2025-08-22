@@ -1,4 +1,4 @@
-# Shopping Cart - Main JavaScript Documentation
+# Shopping Cart - DPS
 
 ## Overview
 [main.js] is the core JavaScript file that handles the shopping cart functionality for an e-commerce website. It manages the cart's user interface, including displaying items, calculating totals, and handling user interactions.
@@ -61,3 +61,4 @@
 - Cart persists only during the current session
 - All prices are formatted to 2 decimal places
 - The cart supports multiple quantities of the same item
+
