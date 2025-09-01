@@ -1,104 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kitty's Shop</title>
-    <link rel="icon" type="image/svg+xml" href="images/kitty-logo.ico">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="icon" type="image/svg+xml" href="images/kitty-logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header">
-            <img src="images/kitty-logo.ico" alt="Kitty's Shop Logo" class="logo">
-            <div class="header-text">
-                <h1>Kitty's Shop</h1>
-                <p>Productos para el felino de tu hogar</p>
-            </div>
-            <div class="cart-icon">
-                <img src="images/cart.png" alt="Shopping Cart" class="cart-img">
-                <span class="cart-count">0</span>
-            </div>
+      <div class="header">
+        <img src="images/kitty-logo.ico" alt="Kitty's Shop Logo" class="logo" />
+        <div class="header-text">
+          <h1>Kitty's Shop</h1>
+          <p>Productos para el felino de tu hogar</p>
         </div>
+        <div class="cart-icon">
+          <img src="images/cart.png" alt="Shopping Cart" class="cart-img" />
+          <span class="cart-count">0</span>
+        </div>
+      </div>
     </header>
     <main>
-        <section class="catalog">
-            <h2>Productos</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/kirby-bed.png" alt="Kirby Cat Bed" name="kirby-bed">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Cama de gatito Kirby</h3>
-                        <p>Excelente cama para gatito del personaje Kirby</p>
-                        <div class="product-price">$50.00</div>
-                        <div class="product-stock">Stock: 10</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/adult-food.png" alt="Adult Cat Food" name="adult-food">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Alimento para gatito</h3>
-                        <p>Excelente alimento para gatito adulto</p>
-                        <div class="product-price">$15.99</div>
-                        <div class="product-stock">Stock: 10</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/whiskas.png" alt="Whiskas Cat Food" name="whiskas">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Whiskas</h3>
-                        <p>Excelente alimento para gatito</p>
-                        <div class="product-price">$5.99</div>
-                        <div class="product-stock">Stock: 10</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/two-cat-food.png" alt="Two Cats Eating" name="two-cat-food">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Dos bolsitas de comida</h3>
-                        <p>Excelente alimento para gatito</p>
-                        <div class="product-price">$5.99</div>
-                        <div class="product-stock">Stock: 10</div>
-                        <button class="add-to-cart-btn">Add to Cart</button>
-                    </div>
-                </div>
+      <section class="catalog">
+        <h2>Productos</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/kirby-bed.png"
+                alt="Kirby Cat Bed"
+                name="kirby-bed"
+              />
             </div>
-        </section>
+            <div class="product-info">
+              <h3 class="product-name">Cama de gatito Kirby</h3>
+              <p>Excelente cama para gatito del personaje Kirby</p>
+              <div class="product-price">$50.00</div>
+              <div class="product-stock">Stock: 10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/adult-food.png"
+                alt="Adult Cat Food"
+                name="adult-food"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Alimento para gatito</h3>
+              <p>Excelente alimento para gatito adulto</p>
+              <div class="product-price">$15.99</div>
+              <div class="product-stock">Stock: 10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/whiskas.png"
+                alt="Whiskas Cat Food"
+                name="whiskas"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Whiskas</h3>
+              <p>Excelente alimento para gatito</p>
+              <div class="product-price">$5.99</div>
+              <div class="product-stock">Stock: 10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="images/two-cat-food.png"
+                alt="Two Cats Eating"
+                name="two-cat-food"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Dos bolsitas de comida</h3>
+              <p>Excelente alimento para gatito</p>
+              <div class="product-price">$5.99</div>
+              <div class="product-stock">Stock: 10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Cart Modal -->
     <div id="cartModal" class="cart-modal">
-        <div class="cart-modal-content">
-            <div class="cart-modal-header">
-                <h2>Your Cart</h2>
-                <span class="close-cart">&times;</span>
-            </div>
-            <div class="cart-items">
-            </div>
-            <div class="cart-total">
-                <strong>Total: $<span id="cartTotal">0.00</span></strong>
-            </div>  
-
+      <div class="cart-modal-content">
+        <div class="cart-modal-header">
+          <h2>Your Cart</h2>
+          <span class="close-cart">&times;</span>
         </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <strong>Total: $<span id="cartTotal">0.00</span></strong>
+        </div>
+        <div class="checkout-section">
+          <button class="checkout-btn" id="checkoutBtn" disabled>
+            Proceder al Pago
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Invoice Modal -->
+    <div id="invoiceModal" class="invoice-modal">
+      <div class="invoice-modal-content">
+        <div class="invoice-header">
+          <h2>Factura de Compra</h2>
+          <span class="close-invoice">&times;</span>
+        </div>
+
+        <div class="invoice-info">
+          <div class="invoice-details">
+            <h3>Información de la Empresa</h3>
+            <p><strong>Kitty's Shop</strong></p>
+            <p>San Salvador, El Salvador</p>
+            <p>NIT: 1234-567890-123-4</p>
+            <p>Teléfono: +503 2222-3333</p>
+          </div>
+          <div class="invoice-details">
+            <h3>Información de la Factura</h3>
+            <p>
+              <strong>No. Factura:</strong> <span id="invoiceNumber"></span>
+            </p>
+            <p><strong>Fecha:</strong> <span id="invoiceDate"></span></p>
+            <p><strong>Hora:</strong> <span id="invoiceTime"></span></p>
+            <p><strong>Cliente:</strong> Cliente General</p>
+          </div>
+        </div>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="invoiceItems"></tbody>
+        </table>
+
+        <div class="invoice-totals">
+          <div class="total-row">
+            <span>Subtotal:</span>
+            <span>$<span id="invoiceSubtotal">0.00</span></span>
+          </div>
+          <div class="total-row">
+            <span>IVA (13%):</span>
+            <span>$<span id="invoiceIVA">0.00</span></span>
+          </div>
+          <div class="total-row final-total">
+            <span>Total a Pagar:</span>
+            <span>$<span id="invoiceFinalTotal">0.00</span></span>
+          </div>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+          Imprimir Factura
+        </button>
+      </div>
     </div>
 
     <script src="js/Calculator.js"></script>
     <script src="js/ShoppingCart.js"></script>
+    <script src="js/InvoiceManager.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
