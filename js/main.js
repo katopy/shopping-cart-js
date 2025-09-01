@@ -82,14 +82,69 @@ function loadEventListeners() {
   cartIcon.addEventListener("click", openCart);
   closeCartBtn.addEventListener("click", closeCart);
 
+  function updateStock() {
+    const products = document.querySelectorAll('.product-card');
+    const items = cart.getItems();
+    
+    products.forEach(product => {
+      const productName = product.querySelector('h3').textContent;
+      const stockElement = product.querySelector('.product-stock');
+      if (!stockElement) return;
+      
+      const currentStock = parseInt(stockElement.textContent.replace('Stock:', '').trim());
+      const cartItem = items.find(item => item.product === productName);
+      
+      if (cartItem) {
+        const newStock = currentStock - cartItem.quantity;
+        stockElement.textContent = `Stock: ${newStock}`;
+      }
+    });
+  }
+
+  function showPaymentConfirmation() {
+    const invoiceModal = document.getElementById('invoiceModal');
+    const invoiceContent = invoiceModal.querySelector('.invoice-modal-content');
+    
+    invoiceContent.style.display = 'none';
+    
+    const confirmationDiv = document.createElement('div');
+    confirmationDiv.className = 'payment-confirmation';
+    confirmationDiv.innerHTML = `
+      <h2>¡Pago Completado!</h2>
+      <p>Gracias por tu compra.</p>
+      <p>Redirigiendo a la tienda...</p>
+    `;
+    
+    invoiceModal.appendChild(confirmationDiv);
+    
+    setTimeout(() => {
+      invoiceModal.style.display = 'none';
+      invoiceContent.style.display = 'block';
+      invoiceModal.removeChild(confirmationDiv);
+    }, 2000);
+  }
+
+  function handlePayment() {
+    updateStock();
+    showPaymentConfirmation();
+    
+    setTimeout(() => {
+      cart.items = [];
+      updateCartUI();
+    }, 1000);
+  }
+
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       closeCart();
       invoiceManager.openInvoice();
-      setTimeout(() => {
-        cart.items = [];
-        updateCartUI();
-      }, 1000);
+      
+      const continuePaymentBtn = document.querySelector('.print-btn:not([onclick])');
+      if (continuePaymentBtn) {
+        const newBtn = continuePaymentBtn.cloneNode(true);
+        continuePaymentBtn.parentNode.replaceChild(newBtn, continuePaymentBtn);
+        newBtn.addEventListener('click', handlePayment);
+      }
     });
   }
 
